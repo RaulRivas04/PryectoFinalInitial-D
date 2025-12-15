@@ -1,0 +1,619 @@
+/* CONTACTO */
+.contacto {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contacto h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--color-text-light);
+}
+
+body.dark .contacto h2 {
+  color: var(--color-text-dark);
+}
+
+.contacto p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+  color: var(--color-text-light);
+}
+
+body.dark .contacto p {
+  color: var(--color-text-dark);
+}
+
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--color-section-light);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: background 0.3s ease, color 0.3s ease;
+  color: var(--color-text-light);
+}
+
+body.dark .contacto form {
+  background: var(--color-section-dark);
+  color: var(--color-text-dark);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+body.dark .contacto input,
+body.dark .contacto textarea {
+  background: #2a2a2a;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.contacto textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contacto .btn {
+  align-self: center;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+/* Botones según tema */
+body:not(.dark) .contacto .btn {
+  background: #111;
+  color: #fff;
+}
+
+body:not(.dark) .contacto .btn:hover {
+  background: #333;
+}
+
+body.dark .contacto .btn {
+  background: #fff;
+  color: #000;
+}
+
+body.dark .contacto .btn:hover {
+  background: #f5f5f5;
+  color: #000;
+}
+
+/* Mensajes de error y éxito */
+.contacto .error-mensaje {
+  color: #dc3545;
+  font-weight: 700;
+  text-align: center;
+}
+
+body.dark .contacto .error-mensaje {
+  color: #ff6b6b;
+}
+
+.contacto .exito-mensaje {
+  color: #28a745;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* RESPONSIVE CONTACTO */
+@media (max-width: 768px) {
+  .contacto {
+    padding: 40px 20px;
+  }
+
+  .contacto form {
+    padding: 20px;
+  }
+}
+
+/* LOGIN FORM */
+.login-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 50px 40px;
+  background: var(--color-section-light);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark .login-form {
+  background: var(--color-section-dark);
+  color: var(--color-text-dark);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.login-form h2 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 35px;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+body.dark .login-form h2 {
+  color: var(--color-text-dark);
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.login-form label {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-text-light);
+  font-size: 16px;
+}
+
+body.dark .login-form label {
+  color: var(--color-text-dark);
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+body.dark .login-form input {
+  background: #2a2a2a;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+.login-form button {
+  padding: 16px 35px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #111;
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+  background: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+body.dark .login-form button {
+  background: #fff;
+  color: #111;
+}
+
+body.dark .login-form button:hover {
+  background: #f5f5f5;
+  color: #111;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+.login-form .error {
+  color: #dc3545;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+body.dark .login-form .error {
+  color: #ff6b6b;
+}
+
+.login-form .registro {
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+.login-form .registro a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-form .registro a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* BOTÓN GOOGLE */
+.google-circle-btn {
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #dadce0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin: 20px auto 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.25s ease;
+}
+
+.google-circle-btn:hover {
+    background: #f7f8f8;
+    border-color: #c6c6c6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.google-circle-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* PASSWORD TOGGLE (OJO MOSTRAR/OCULTAR) */
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 55px !important;
+}
+
+.toggle-pass {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+}
+
+.toggle-pass:hover {
+  opacity: 1;
+}
+
+.toggle-pass svg {
+  width: 26px;
+  height: 26px;
+  fill: #555;
+}
+
+body.dark .toggle-pass svg {
+  fill: #ddd;
+}
+
+/* RESPONSIVE LOGIN */
+@media (max-width: 1024px) {
+  .login-form {
+    max-width: 500px;
+    padding: 45px 30px;
+    margin: 80px auto;
+  }
+
+  .login-form h2 {
+    font-size: 32px;
+  }
+
+  .login-form button {
+    font-size: 17px;
+    padding: 15px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-form {
+    max-width: 90%;
+    padding: 40px 25px;
+    margin: 60px auto;
+  }
+
+  .login-form h2 {
+    font-size: 28px;
+  }
+
+  .login-form button {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-form {
+    padding: 30px 20px;
+    margin: 40px auto;
+  }
+
+  .login-form h2 {
+    font-size: 24px;
+  }
+
+  .login-form input,
+  .login-form button {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+}
+
+/* REGISTRO FORM */
+.registro-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 50px 40px;
+  background: var(--color-section-light);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark .registro-form {
+  background: var(--color-section-dark);
+  color: var(--color-text-dark);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.registro-form h2 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 35px;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+body.dark .registro-form h2 {
+  color: var(--color-text-dark);
+}
+
+.registro-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.registro-form label {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-text-light);
+  font-size: 16px;
+}
+
+body.dark .registro-form label {
+  color: var(--color-text-dark);
+}
+
+.registro-form input {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+body.dark .registro-form input {
+  background: #2a2a2a;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.registro-form input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+/* BOTÓN REGISTRO */
+.registro-form button {
+  padding: 16px 35px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #111;
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.registro-form button:hover {
+  background: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+body.dark .registro-form button {
+  background: #fff;
+  color: #111;
+}
+
+body.dark .registro-form button:hover {
+  background: #f5f5f5;
+  color: #111;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+/* ERRORES REGISTRO */
+.registro-form .error {
+  color: #dc3545;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+body.dark .registro-form .error {
+  color: #ff6b6b;
+}
+
+/* MENSAJE DE ÉXITO */
+.registro-form .success {
+  color: #28a745;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+body.dark .registro-form .success {
+  color: #5dff7a;
+}
+
+/* Error de repetir contraseña */
+#passError {
+  color: #dc3545;
+  font-weight: 600;
+  margin-top: -10px;
+  display: none;
+  font-size: 15px;
+}
+
+/* LINK A LOGIN */
+.registro-form .login-link {
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+.registro-form .login-link a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.registro-form .login-link a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* BARRA FUERZA CONTRASEÑA */
+.strength-container {
+  margin-top: 5px;
+  text-align: left;
+}
+
+#strengthBar {
+  height: 6px;
+  width: 100%;
+  border-radius: 4px;
+  background: #ddd;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+#strengthText {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ERROR REPETIR CONTRASEÑA */
+.pass-error {
+  display: none;
+  color: #dc3545;
+  font-weight: 600;
+  margin-top: -10px;
+}
+
+/* RESPONSIVE REGISTRO */
+@media (max-width: 1024px) {
+  .registro-form {
+    max-width: 500px;
+    padding: 45px 30px;
+    margin: 80px auto;
+  }
+
+  .registro-form h2 {
+    font-size: 32px;
+  }
+
+  .registro-form button {
+    font-size: 17px;
+    padding: 15px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .registro-form {
+    max-width: 90%;
+    padding: 40px 25px;
+    margin: 60px auto;
+  }
+
+  .registro-form h2 {
+    font-size: 28px;
+  }
+
+  .registro-form button {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .registro-form {
+    padding: 30px 20px;
+    margin: 40px auto;
+  }
+
+  .registro-form h2 {
+    font-size: 24px;
+  }
+
+  .registro-form input,
+  .registro-form button {
+    padding: 12px 15px;
+    font-size: 15px;
+  }
+}
